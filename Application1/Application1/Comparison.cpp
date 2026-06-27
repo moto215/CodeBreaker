@@ -6,6 +6,8 @@ void Comparison::Comp(int* answer[], int* input[])
 	// 答えを保持しておく
 	//int* keepAnswer[4];
 
+	// まず先にヒットの確認処理を入れる？
+
 	// 結果の比較
 	for (int i = 0; i < 4; i++)
 	{
