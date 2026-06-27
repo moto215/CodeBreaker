@@ -12,37 +12,17 @@ int main()
 {
 	srand((unsigned int)time(NULL));
 
-	AnswerNumber answerNum[4];
-	InputNumber inputNum[4];
+	AnswerNumber answerNum;
+	InputNumber inputNum;
 
 	// ランダム値の生成
-	for (int i = 0; i < std::size(answerNum); i++) 
-	{
-		answerNum[i].Random();
-	}
+	answerNum.Random();
+
 	// 入力値の保持
-	for (int i = 0; i < std::size(inputNum); i++)
-	{
-		inputNum[i].Input();
-	}
+	inputNum.Input();
 
 	Comparison comparison;
 
 	// 結果の比較
-	for (int i = 0; i < 4; i++)
-	{
-		for (int k = 0; k < 4; k++)
-		{
-			if (*answerNum[i].randomNum_ == *inputNum[k].inputNum_)
-			{
-				if (i == k) 
-				{
-					//hitの処理
-					break;
-				}
-
-			}
-			//comparison.Comp(answerNum[i].randomNum_, inputNum[k].inputNum_);
-		}
-	}
+	comparison.Comp(answerNum.randomNum_, inputNum.inputNum_);
 }

@@ -3,8 +3,11 @@
 
 void InputNumber::Input()
 {
-	std::cout << "\n0`9‚Ì”š‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢" << std::endl;
-	scanf_s("%d", &input);
-	inputNum_ = &input;
-	std::cout << "“ü—Í‚³‚ê‚½”š:" << inputNum_ << std::endl;
+	for (int i = 0; i < std::size(inputNum_); i++)
+	{
+		std::cout << "\n0`9‚Ì”š‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢" << std::endl;
+		scanf_s("%d", &input[i]);
+		inputNum_[i] = &input[i];
+		std::cout << "“ü—Í‚³‚ê‚½”š:" << inputNum_[i] << std::endl;
+	}
 }

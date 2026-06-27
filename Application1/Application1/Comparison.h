@@ -6,7 +6,7 @@ class Comparison
 {
 public:
 	// ”äŠr‚ğ‚·‚é
-	void Comp(int* answer, int* input);
+	void Comp(int* answer[], int* input[]);
 
 private:
 	int answer_;

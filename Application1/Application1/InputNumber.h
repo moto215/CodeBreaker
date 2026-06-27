@@ -6,8 +6,8 @@ public:
 	void Input();
 
 public:
-	int* inputNum_ = 0;
+	int* inputNum_[4];
 
 private:
-	int input;
+	int input[4];
 };

@@ -5,8 +5,11 @@
 
 void AnswerNumber::Random()
 {
-	// deleteするように気を付ける(sharedを使ってもよさそう)
-	randomNum_ = new int(rand() % 10);
-	// 答えの数字を出力
-	std::cout << *randomNum_ << std::endl;
+	for (int i = 0; i < std::size(randomNum_); i++) 
+	{
+		// deleteするように気を付ける(sharedを使ってもよさそう)
+		randomNum_[i] = new int(rand() % 10);
+		// 答えの数字を出力
+		std::cout << *randomNum_[i] << std::endl;
+	}
 }

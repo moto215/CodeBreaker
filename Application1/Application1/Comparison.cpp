@@ -1,22 +1,29 @@
 #include "Comparison.h"
+#include <iostream>
 
-void Comparison::Comp(int* answer, int* input)
+void Comparison::Comp(int* answer[], int* input[])
 {
 	// 結果の比較
 	for (int i = 0; i < 4; i++)
 	{
 		for (int k = 0; k < 4; k++)
 		{
-			if (*answer == *input)
+			if (*answer[i] == *input[k])
 			{
 				if (i == k)
 				{
-					delete input;
-					input = nullptr;
+					std::cout << "ヒット" << std::endl;
+					//delete input[k];
+					//input[k] = nullptr;
+					*input[k] = 10;
 					hit++;
 					break;
 				}
-				// blow の処理
+				else 
+				{
+					// blow の処理
+					std::cout << "ブロー" << std::endl;
+				}
 			}
 		}
 	}
