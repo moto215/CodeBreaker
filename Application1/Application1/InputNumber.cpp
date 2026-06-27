@@ -4,6 +4,7 @@
 void InputNumber::Input()
 {
 	std::cout << "\n0`9‚Ì”š‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢" << std::endl;
-	scanf_s("%d", &inputNum_);
+	scanf_s("%d", &input);
+	inputNum_ = &input;
 	std::cout << "“ü—Í‚³‚ê‚½”š:" << inputNum_ << std::endl;
 }

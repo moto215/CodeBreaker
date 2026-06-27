@@ -33,7 +33,16 @@ int main()
 	{
 		for (int k = 0; k < 4; k++)
 		{
-			comparison.Comp(answerNum[i], inputNum[k]);
+			if (*answerNum[i].randomNum_ == *inputNum[k].inputNum_)
+			{
+				if (i == k) 
+				{
+					//hitの処理
+					break;
+				}
+
+			}
+			//comparison.Comp(answerNum[i].randomNum_, inputNum[k].inputNum_);
 		}
 	}
 }

@@ -5,6 +5,9 @@ public:
 	// 0`9‚Ì”š‚ğ“ü—Í‚µ inputNum ‚É‘ã“ü‚·‚é
 	void Input();
 
-private:
+public:
 	int* inputNum_ = 0;
+
+private:
+	int input;
 };
