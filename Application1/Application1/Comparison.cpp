@@ -27,6 +27,7 @@ void Comparison::Comp(int* answer[], int* input[])
 					// blow の処理
 					std::cout << "ブロー" << std::endl;
 					// ブローの時はその数字を判定させないようにする
+					// ただヒットがあるか先に確認したい
 					*answer[i] = 10;
 				}
 			}
