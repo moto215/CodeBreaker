@@ -3,6 +3,9 @@
 
 void Comparison::Comp(int* answer[], int* input[])
 {
+	// 答えを保持しておく
+	//int* keepAnswer[4];
+
 	// 結果の比較
 	for (int i = 0; i < 4; i++)
 	{
@@ -15,7 +18,7 @@ void Comparison::Comp(int* answer[], int* input[])
 					std::cout << "ヒット" << std::endl;
 					//delete input[k];
 					//input[k] = nullptr;
-					*input[k] = 10;
+					*answer[i] = 10;
 					hit++;
 					break;
 				}
@@ -23,6 +26,8 @@ void Comparison::Comp(int* answer[], int* input[])
 				{
 					// blow の処理
 					std::cout << "ブロー" << std::endl;
+					// ブローの時はその数字を判定させないようにする
+					*answer[i] = 10;
 				}
 			}
 		}
